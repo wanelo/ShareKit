@@ -73,7 +73,6 @@ static SHKFacebook *requestingPermisSHKFacebook=nil;
 - (void)dealloc
 {
 	[self cancelPendingRequests];
-	[FBSession.activeSession close];	// unhooks this instance from the sessionStateChanged callback
 	if (authingSHKFacebook == self) {
 		authingSHKFacebook = nil;
 	}
